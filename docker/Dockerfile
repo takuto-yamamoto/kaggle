@@ -19,7 +19,7 @@ RUN pip3 install lightgbm optuna
 ARG JUPYTER_PASSWD=''
 
 # User name
-ARG NB_USER='tarte'
+ARG NB_USER="tarte"
 
 # Copy kaggle.json
 RUN mkdir /.kaggle
@@ -35,7 +35,7 @@ RUN jupyter notebook -y --generate-config
 RUN ./scripts/notebook_config.sh $JUPYTER_PASSWD
 
 # working directory
-WORKDIR work
+WORKDIR /home/$NB_USER/work
 RUN mkdir input output src
 
 # Port
