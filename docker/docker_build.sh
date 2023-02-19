@@ -4,7 +4,7 @@
 docker build -t tarte/kaggle-base .
 
 # Check the hashed passwaord is set by user in Dockerfile.
-while read line
+while read -r line
 do
     if [[ $line == "ARG JUPYTER_PASSWD=''" ]]; then
         # Notice user to set jupyter notenook password
