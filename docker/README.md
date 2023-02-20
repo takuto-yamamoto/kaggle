@@ -22,9 +22,16 @@ Please set the following JUPYTER_PASSWD variable in Dockerfile.
 
 ARG JUPYTER_PASSWD= {This is your hashed pasword}
 ```
+If your gpus are avalable, edit docker run script.
+```
+- GPU=""
+- # GPU="--gpus all"
+
++ # GPU=""
++ GPU="--gpus all"
+```
 Rebuild your docker-image and run the container. \
 Then Juppyter Notebook will start at http://localhost:8888/.
-
 ```
 $ ./docker_build.sh
 $ ./docker_run.sh {Your container name}
