@@ -1,6 +1,6 @@
 How to Use
 ===
-Copy your Kaggle API token to this directory.
+Copy your Kaggle API config file to this directory.
 ```
 $ cp ~/.kaggle/kaggle.json ./kaggle.json
 ```
