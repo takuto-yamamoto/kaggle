@@ -1,8 +1,8 @@
 How to Use
 ===
-Get your kaggle API token and copy to this directory.
+Copy your Kaggle API token to this directory.
 ```
-$ cp ~/Downloads/kaggle.json ./kaggle.json
+$ cp ~/.kaggle/kaggle.json ./kaggle.json
 ```
 
 Build and run `tarte/kaggle-base`.
