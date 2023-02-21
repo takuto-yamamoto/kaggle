@@ -18,9 +18,9 @@ if [ ! -d "$WORK_DIR"/src/"$1" ]; then
 fi
 
 # RUN
-docker run "$GPU" -d -it \
--v "$WORK_DIR"/src/"$1":/home/$NB_USER/work/src \
--p $HOST_PORT:$GUEST_PORT --name "$CONTAINER_NAME" $IMAGE_NAME \
+docker run $GPU -d -it \
+-v "$WORK_DIR"/src/"$1"/:/home/"$NB_USER"/work/src/ \
+-p "$HOST_PORT":"$GUEST_PORT" --name "$CONTAINER_NAME" "$IMAGE_NAME" \
 jupyter notebook --allow-root
 
 docker exec -it "$CONTAINER_NAME" /bin/bash
