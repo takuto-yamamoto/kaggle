@@ -2,24 +2,20 @@ How to Use
 ===
 Copy your Kaggle API config file to this directory.
 ```
-$ cp ~/.kaggle/kaggle.json ./kaggle.json
+cp ~/.kaggle/kaggle.json ./kaggle.json
 ```
 
 Build and run `tarte/kaggle-base`.
 ```
-$ ./docker_build.sh
-$ docker run --rm -it tarte/kaggle-base
+./docker_build.sh
+docker run --rm -it tarte/kaggle-base
 ```
 Set your Jupyter Notebook password.
 ```
-# python3 ../scripts/pass.py
-Enter password:
-Verify password:
+python3 ../scripts/pass.py
 ```
 Check the command response and set your hashed password in your local env.
 ```
-Please set the following JUPYTER_PASSWD variable in your local env.
-
 export JUPYTER_PASSWD= {This is your hashed pasword}
 ```
 If your gpus are avalable, edit docker run script.
@@ -33,8 +29,8 @@ If your gpus are avalable, edit docker run script.
 Rebuild your docker-image and run the container. \
 Then Juppyter Notebook will start at http://localhost:8888/.
 ```
-$ ./docker_build.sh
-$ ./docker_run.sh {Your container name}
+./docker_build.sh
+./docker_run.sh {Your container name}
 ```
 <br>
 
