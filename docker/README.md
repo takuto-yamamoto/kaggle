@@ -12,7 +12,7 @@ $ docker run --rm -it tarte/kaggle-base
 ```
 Set your Jupyter Notebook password.
 ```
-# python3 ~/scripts/pass.py
+# python3 ../scripts/pass.py
 Enter password:
 Verify password:
 ```
