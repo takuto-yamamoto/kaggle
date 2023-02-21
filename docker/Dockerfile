@@ -22,7 +22,7 @@ ARG JUPYTER_PASSWD=''
 ARG NB_USER="tarte"
 
 # Copy kaggle.json
-RUN mkdir /.kaggle
+RUN mkdir /root/.kaggle
 COPY ./kaggle.json /root/.kaggle/kaggle.json
 RUN chmod 600 /root/.kaggle/kaggle.json
 
