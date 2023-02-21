@@ -16,7 +16,7 @@ RUN pip3 install torch torchvision torchaudio --extra-index-url https://download
 RUN pip3 install lightgbm optuna
 
 # Jupyter notebook hashed password
-ARG JUPYTER_PASSWD
+ARG JUPYTER_PASSWD="sha1:51dff5489e42:183d2d5c2ec7b11a9e86bb787de80c9e1b909cdb"
 
 # User name
 ARG NB_USER="tarte"
