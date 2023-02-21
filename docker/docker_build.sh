@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build the image
-docker build -t tarte/kaggle-base .
+docker build -t tarte/kaggle-base --build-arg JUPYTER_PASSWD="$JUPYTER_PASSED" .
 
 # Check the hashed passwaord is set by user in Dockerfile.
 while read -r line
@@ -23,8 +23,8 @@ do
         echo "Exit from the docker container."
         echo "  $ exit"
         echo ""
-        echo "Please set JUPYTER_PASSWD variable in the Dockerfile."
-        echo "ex. ARG JUPYTER_PASSWD='sha1:25e2bc817b10:917f1e38841d80dfa40535f60a88bc83c5228297'"
+        echo "Please set JUPYTER_PASSWD variable in your local env."
+        echo "ex. export JUPYTER_PASSWD='sha1:25e2bc817b10:917f1e38841d80dfa40535f60a88bc83c5228297'"
         echo ""
         echo "Finally, build the docker image again and run."
         echo ""
