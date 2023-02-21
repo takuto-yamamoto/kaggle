@@ -4,7 +4,7 @@ from notebook.auth import passwd
 hashed_passwd = passwd()
 
 print('')
-print('Please set the following JUPYTER_PASSWD variable in Dockerfile.')
+print('Please set the following JUPYTER_PASSWD variable in your local env.')
 print('')
-print(f"ARG JUPYTER_PASSWD={hashed_passwd}")
+print(f"export JUPYTER_PASSWD={hashed_passwd}")
 print('')

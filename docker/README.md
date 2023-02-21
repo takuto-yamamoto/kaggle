@@ -1,6 +1,6 @@
 How to Use
 ===
-Copy your Kaggle API token to this directory.
+Copy your Kaggle API config file to this directory.
 ```
 $ cp ~/.kaggle/kaggle.json ./kaggle.json
 ```
@@ -16,11 +16,11 @@ Set your Jupyter Notebook password.
 Enter password:
 Verify password:
 ```
-Check the command response and set your hashed password in your local Dockerfile.
+Check the command response and set your hashed password in your local env.
 ```
-Please set the following JUPYTER_PASSWD variable in Dockerfile.
+Please set the following JUPYTER_PASSWD variable in your local env.
 
-ARG JUPYTER_PASSWD= {This is your hashed pasword}
+export JUPYTER_PASSWD= {This is your hashed pasword}
 ```
 If your gpus are avalable, edit docker run script.
 ```
